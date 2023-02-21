@@ -10,9 +10,69 @@
     <h1><strong>Travel reservation form</strong></h1>
     <h2><strong>* denotes mandotory</strong></h2>
     <form>
-        <h2>Full name*</h2>
-        <section class="name">
-            
+      <section class="fullname">
+        <label for="fullname">Full name*:</label><br />
+        <input
+          type="text"
+          name="fullname"
+          id="fullname"
+          placeholder="FirstName LastName"
+        />
+      </section>
+
+      <section class="email">
+        <label for="email">Email address*:</label><br />
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="EMAIL_ADDRESS"
+        />
+      </section class="package">
+      <label for="package">Select Tour Package*:</label> <br>
+        <select name="package" id="package" >
+            <option value="solo">Solo</option>
+            <option value="couple">Couple</option>
+            <option value="family">Family</option>
+        </select>
+
+      <section class="arrival_date">
+        <label for="arrival_date">Arrival date*:</label><br>
+        <input type="date" name="arrival_date" id="arrival_date">
+        <!--don't konw how to set date-format :use pattern?-->
+      </section>
+
+      <section class="persons">
+        <label for="persons">Number of persons*:</label><br>
+        <input type="text" name="persons" id="persons" placeholder="UNKNOWN_TYPE">
+      </section>
+
+      <section>
+        <span>What would you want to avail?*</span><br>
+        <label for="boarding">Boarding</label>
+        <input type="checkbox" name="avail" id="boarding" value="boarding"><br>
+        <label for="fooding">Fooding</label>
+        <input type="checkbox" name="avail" id="fooding" value="fooding"><br>
+        <label for="seeing">Sight seeing</label>
+        <input type="checkbox" name="avail" id="seeing" value="seeing"><br>
+      </section>
+
+      <section>
+        <label for="coupon">Discount Coupon code:</label><br>
+        <input type="text" name="coupon" id="coupon" placeholder="UNKNOWN_TYPE">
+      </section>
+
+      <section>
+        <span>Terms and conditions*</span><br>
+        <input type="radio" name="yes" id="yes" value="yes">
+        <label for="yes">I agree</label>
+        <input type="radio" name="no" id="no" value="no">
+        <label for="no">I disagree</label>
+      </section>
+
+      <section class="submission">
+        <input type="submit" value="Complete reservation">
+      </section>
     </form>
   </body>
 </html>
